@@ -1,6 +1,6 @@
 {
   "name": "easy-url-builder",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "URL builder class in TypeScript and JavaScript (ES and Modules)",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -18,7 +18,7 @@
     "clean": "rm -rf ./lib/",
     "publish/check-files": "npx pkgfiles",
     "check-license": "npx license-checker --production --summary",
-    "publish": "npm run clean && npm run build && npm publish"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
