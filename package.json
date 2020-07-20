@@ -1,0 +1,48 @@
+{
+  "name": "easy-url-builder",
+  "version": "1.0.0",
+  "description": "URL builder class in TypeScript and JavaScript (ES and Modules)",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test/watch": "jest --watch",
+    "lint": "eslint . --ext .ts",
+    "test/lint": "npm run test && npm run lint",
+    "build/esm": "tsc -p tsconfig.esm.json",
+    "build/cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run clean && npm run build/esm && npm run build/cjs",
+    "clean": "rm -rf ./lib/",
+    "publish/check-files": "npx pkgfiles",
+    "check-license": "npx license-checker --production --summary",
+    "publish": "npm run clean && npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherBilg/easy-url-builder.git"
+  },
+  "keywords": [
+    "url",
+    "uri",
+    "builder",
+    "easy"
+  ],
+  "author": "CRB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristopherBilg/easy-url-builder/issues"
+  },
+  "homepage": "https://github.com/ChristopherBilg/easy-url-builder#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.4.0",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.9.7"
+  }
+}
