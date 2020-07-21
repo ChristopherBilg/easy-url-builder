@@ -1,0 +1,2 @@
+- Configure /lib/* file minification/compression
+  - Must retain source-maps
